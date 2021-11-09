@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Excuse Generator</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+        <h1 id="excuse">Placeholder Text</h1>
+	<script>
+		var excuses = {
+		who: ['The dog','My grandma','His turtle','My bird'],
+		action: ['ate','peed','crushed','broke'],
+		what: ['my homework', 'the keys', 'the car'],
+		when: ['before the class','right on time','when I finished','during my lunch','while I was praying']
+		};
+
+		function generator(){
+    		let x = [];
+    		for(var i = 0; i < 4; i++){
+        	if( i ==0){
+            x.push(excuses.who[Math.floor(Math.random()*(excuses.who.length))]);
+        	}
+        	else if( i == 1){
+            x.push(excuses.action[Math.floor(Math.random()*(excuses.action.length))]);
+        	}
+        	else if( i ==2){
+            x.push(excuses.what[Math.floor(Math.random()*(excuses.what.length))]);
+        	}
+        	else{
+            x.push(excuses.when[Math.floor(Math.random()*(excuses.when.length))]);
+        	}
+    		}
+    	return x.join(' ');
+		}
+		document.getElementById("excuse").innerHTML = generator();
+	</script>
+	</body>
+</html>
