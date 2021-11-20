@@ -9,13 +9,15 @@
 	<body>
         <h1 id="excuse">Placeholder Text</h1>
 	<script>
+
+		function myFunction(){
 		var excuses = {
 		who: ['The dog','My grandma','His turtle','My bird'],
 		action: ['ate','peed','crushed','broke'],
 		what: ['my homework', 'the keys', 'the car'],
 		when: ['before the class','right on time','when I finished','during my lunch','while I was praying']
 		};
-
+		
 		function generator(){
     		let x = [];
     		for(var i = 0; i < 4; i++){
@@ -35,6 +37,11 @@
     	return x.join(' ');
 		}
 		document.getElementById("excuse").innerHTML = generator();
+	
+
+	}
+
 	</script>
+	<button onclick="myFunction()">Click Me</button>
 	</body>
 </html>
